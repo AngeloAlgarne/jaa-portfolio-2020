@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>My Personal Portfolio</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <nav id="mobile_nav" onclick="clicked_navbar()">=</nav>
+        
+        <nav id="navbar">
+            <div>
+                <h4 onclick="clicked_details(false)">Personal Details<span class="red">;</span></h4>
+    
+                <h4 onclick="clicked_expertise(false)">Expertise<span class="red">;</span></h4>
+                <div id="nav_expertise">
+                    <ul>
+                        <li><a href="#programming">Programming</a></li>
+                        <li><a href="#music">Music</a></li>
+                        <li><a href="#academic">Academic</a></li>
+                    </ul>
+                </div>
+                
+                <h4 onclick="clicked_hobbies(false)">Hobbies<span class="red">;</span></h4>
+                <div id="nav_hobbies">
+                    <ul>
+                        <li><a href="#playing_instruments">Playing Instruments</a></li>
+                        <li><a href="#playing_games">Playing Games</a></li>
+                        <li><a href="#watching_youtube">Watching YouTube</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        
+        <header id="introduction">
+            <h1>
+                Hi<span class="red">,</span> I<span class="red">'</span>m 
+                <span style="color: #e7dfd5;">
+                    John Angelo<span class="red">!</span>
+                </span>
+            </h1>
+            <p>and <span class="red">this</span> is my
+                <span style="color: #e7dfd5">personal website</span>
+            </p>
+        </header>
+        
+        <div id="show_details" class="button_with_background">
+            <button onclick="clicked_details(true)"><span class="blue">P</span>ers<span class="blue">on</span><span class="red">a</span>l Deta<span class="red">i</span>ls</button>
+            <div id="personal_details" class="displayed_info">
+                <div id="header">
+                    <div><img src="images/bg.jpg" id="my_bg" alt="piano"></div>
+                    <div><img src="images/pfp.png" id="my_picture" alt="picture of me"></div>
+                    <div id="text">
+                        <h2>John Angelo Algarne</h2>
+                    </div>
+                </div>
+                <hr>
+                <div id="details">
+                    <p class="label"><b>Name<span class="red">:</span></b></p>
+                    <p> Algarne<span class="red">,</span> John Angelo</p>
+
+                    <p class="label"><b>Education<span class="red">:</span></b></p>
+                    <p> 
+                        Studying at University of Santo Tomas
+                        <br>Bachelor of Science in Computer Science
+                    </p>
+                </div> 
+                <button onclick="clicked_details(true)" class="hide_button">Hide</button>
+            </div>
+        </div>
+        
+        <div id="show_expertise" class="button_with_background">
+            <button onclick="clicked_expertise(true)">E<span class="red">x</span>perti<span class="blue">se</span></button>
+            <div id="expertise" class="displayed_info">
+                <hr>
+                <section id="programming">
+                    <h3>Programming</h3> 
+                    <h4><span class="red">(</span>Basic Knowledge<span class="red">)</span></h4>
+                    <p>
+                        In programming, I know that I'm still an amateur; I know I still have a 
+                        <em>lot</em> to learn, but I also know that I have learned a lot.
+                    </p>
+                    <div class="gallery">
+                        <video src="videos/helloworld.mp4" controls></video>
+                        <h4 class="caption">Arduino Project</h4>
+                        <img src="images/glancehome.png" alt="Website Project">
+                        <h4 class="caption">Sample Website Project</h4>
+                        <img src="images/Calculator.png" alt="Calculator Project">
+                        <h4 class="caption">Matrix Calculator Project</h4>
+                    </div>
+                </section>
+                <hr>
+                <section id="music">
+                    <h3>Music</h3>
+                    <h4><span class="red">(</span>Intermediate Knowledge<span class="red">)</span></h4>
+                    <p>
+                        I have been studying music now for about 3 years, but I actually started playing the
+                        guitar 7 years ago, just without music sheets. Although I'm still learning
+                        how to sight read, I can confidently say that I'm a musician and a composer.
+                    </p>
+                    <div class="gallery">
+                        <video src="videos/moonriver.mp4" controls></video>
+                        <h4 class="caption">Moonriver Arragement</h4>
+                        <audio src="audios/kalawakan.wav" controls></audio>
+                        <h4 class="caption"><em>"kalawakan."</em> - Original Composition</h4>
+                        <audio src="audios/stars were once gas clouds. by me.mp3" controls></audio>
+                        <h4 class="caption"><em>"stars were once gas clouds"</em> - Original Composition</h4>
+                    </div>
+                </section>
+                <hr>
+                <section id="academic">
+                    <h3>Academic</h3>
+                    <h4><span class="red">(</span>Informal Expertise<span class="red">)</span></h4>
+                    <p>
+                        So, this is not a definite expertise, but what is it anyway?
+                        Well, it's mostly about <em>academic writing</em> such as essays, 
+                        <em>managing group projects and people</em>, a lot of
+                        <em>time management</em> regarding requirements, 
+                        and most importantly, having a <em>competitive spirit</em>.
+                        It's just something that I know I possess, and I'm proud of
+                        myself for that.
+                    </p>
+                </section>
+                <button onclick="clicked_expertise(true)" class="hide_button">Hide</button>
+            </div>
+        </div>
+
+        <div id="show_hobbies" class="button_with_background">
+            <button onclick="clicked_hobbies(true)"><span class="red">H</span>ob<span class="blue">bie</span>s</button>
+            <div id="hobbies" class="displayed_info">
+                <hr>
+                <section id="playing_instruments">
+                    <h3>Playing Instruments</h3>
+                    <p>
+                        Instruments are like toys to me, but in a level where I respect the craft and its purpose.
+                        I mainly only play the piano and guitar as I've been playing them for a long time now, and
+                        as for the other instruments, I still know how to play them, but not as much as the first two
+                        that I've mentioned. I also play the ukulele since my sister has one, but I don't own one.
+                        I have a some amount of instruments. Here's all of them:
+                    </p>
+                    <ul id="list_of_instruments">
+                        <li>
+                            <div class="middle">
+                              <div class="text">
+                                  <h3>Digital Piano</h3>
+                                  <p>Yamaha, digital version of the piano, a stringed instrument</p>
+                              </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="middle">
+                              <div class="text">
+                                  <h3>Acoustic Guitar</h3>
+                                  <p>Fender acoustic guitar, a stringed instrument</p>
+                              </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="middle">
+                              <div class="text">
+                                  <h3>Violin</h3>
+                                  <p>Bachendorff, local brand violin, a stringed instrument</p>
+                              </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="middle">
+                              <div class="text">
+                                  <h3>Kazoo..</h3>
+                                  <p> an American musical instrument that adds a "buzzing" timbral quality to a player's 
+                                      voice when the player vocalizes or hums into it.</p>
+                              </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="middle">
+                              <div class="text">
+                                  <h3>Kalimba</h3>
+                                  <p>part of the family of instrument Mbira, wooden board with attached staggered metal tines.</p>
+                              </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="middle">
+                              <div class="text">
+                                  <h3>Harmonica</h3>
+                                  <p>also known as a French harp or mouth organ, is a free reed wind instrument used 
+                                      worldwide in many musical genres</p>
+                              </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="middle">
+                              <div class="text">
+                                  <h3>Recorder</h3>
+                                  <p>The recorder is a family of woodwind musical instruments in the group known as internal 
+                                      duct flutes—flutes with a whistle mouthpiece.</p>
+                              </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <p>
+                        Credits for taking Photos: Carmela Grace Algarne
+                    </p>
+                </section>
+                <hr>
+                <section id="playing_games">
+                    <h3>Playing Games</h3>
+                    <p>
+                        I've been playing games since I was a little, and until now, I still do.
+                        Although, back then, I used to play a lot of RPG games such as Mario 64
+                        and Pokemon, but I grew loving more of the games that has some level of 
+                        competitiveness.
+                        Here are some of the games that I love playing:
+                    </p>
+                    <ul id="list_of_games">
+                        <li>
+                            <div class="middle">
+                              <div class="text">
+                                  <h3>Hollow Knight</h3>
+                                  <p>
+                                    is a 2D Metroidvania action-adventure game, 
+                                    and takes place in Hallownest, a fictional ancient kingdom.
+                                  </p>
+                              </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="middle">
+                              <div class="text">
+                                  <h3>Dota 2</h3>
+                                  <p>
+                                    is a multiplayer online battle arena video game developed and published by Valve.
+                                  </p>
+                              </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="middle">
+                              <div class="text">
+                                  <h3>Risk of Rain 2</h3>
+                                  <p>
+                                    is a roguelike third-person shooter developed by Hopoo Games 
+                                    and published by Gearbox Publishing.
+                                  </p>
+                              </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="middle">
+                              <div class="text">
+                                  <h3>Deep Rock Galactic</h3>
+                                  <p>
+                                    is a cooperative first-person shooter video game developed by 
+                                    Danish indie studio Ghost Ship Games and published by Coffee Stain Publishing. 
+                                  </p>
+                              </div>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+                <hr>
+                <section id="watching_youtube">
+                    <h3>Watching Youtube</h3>
+                    <p>
+                        Whenever I'm extremely bored, not in the mood to play my instruments nor play a game,
+                        I just end up surfing through either twitter, facebook, instagram, and especially youtube.
+                        Here are my top youtube channels that I watch:
+                    </p>
+                     <ul id="list_of_ytchannels">
+                        <li>
+                            <div class="middle">
+                              <div class="text">
+                                  <h3>Pewdiepie</h3>
+                                  <p>
+                                    Felix Arvid Ulf Kjellberg, known online as PewDiePie, is an England-based Swedish YouTuber, 
+                                    comedian, gamer, and philanthropist, known primarily for his Let's Play videos 
+                                    and comedic formatted shows. 
+                                  </p>
+                              </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="middle">
+                              <div class="text">
+                                  <h3>Vsauce</h3>
+                                  <p>
+                                    The channels feature videos on scientific, psychological, mathematical, and philosophical topics, 
+                                    as well as gaming, technology, popular culture, and other general interest subjects. 
+                                  </p>
+                              </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="middle">
+                              <div class="text">
+                                  <h3>Vsauce3</h3>
+                                  <p>
+                                    Vsauce3 covers the real-world science of fictional worlds: books, video games, and movies. 
+                                  </p>
+                              </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="middle">
+                              <div class="text">
+                                  <h3>Mark Rober</h3>
+                                  <p>
+                                    Former NASA engineer. Current YouTuber and friend of science.
+                                  </p>
+                              </div>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+                <button onclick="clicked_hobbies(true)" class="hide_button">Hide</button>
+            </div>  
+        </div>
+        
+        <footer>
+            <h2>Last Updated: November 19, 2023</h2>
+            <!-- <ul>
+                <li><a href="#">facebook</a></li>
+                <li><a href="#">twitter</a></li>
+                <li><a href="#">instagram</a></li>
+                <li><a href="#">fiverr</a></li>
+            </ul> -->
+        </footer>
+        
+        <script src="script/buttonscript.js"></script>
+    </body>
+</html>

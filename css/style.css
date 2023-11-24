@@ -1,0 +1,601 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 09 4, 20, 8:20:59 PM
+    Author     : geloa
+*/
+@import url('https://fonts.googleapis.com/css2?family=Raleway&family=Roboto+Mono:wght@300&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    width: 100%;
+    font-family: 'Roboto Mono', sans-serif;
+    display: flex;
+    flex-direction: column;
+    background-color: #204051;
+}
+
+a {
+    text-decoration: none;
+    color: #e7dfd5;
+}
+
+.red {
+    color: #ed6663;
+}
+
+.blue {
+    color: #3b6978;
+}
+
+#mobile_nav {
+    display: none;
+}
+            
+#navbar {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    color: #e7dfd5;
+    align-items: center;
+    z-index: 3;
+    opacity: 0;
+    transition: all 0.8s ease;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+#navbar:hover {
+    opacity: 1;
+}
+
+#navbar > div {
+    display: flex;
+    align-items: center;
+    margin-right:10px;
+    float: right;
+    justify-content: space-between;
+}
+
+#navbar h4 {
+    opacity: 0.7;
+    padding: 0 10px;
+    font-weight: bolder;
+}
+
+#navbar h4:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+#nav_expertise, #nav_hobbies {
+    display: none;
+}
+
+#navbar ul {
+    opacity: 0.6;
+    max-width: 100%;
+    padding: 0;
+    list-style-type: none;
+    align-items: center;
+}
+
+
+#navbar ul li {
+    padding: 5px 15px;
+    font-size: 0.9vw;
+}
+
+
+/*INTRODUCTION - header */ 
+
+#introduction {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    height: 101vh;
+    background-color: #204051;
+    color: #84a9ac;
+    padding-bottom: 10%;
+    animation-name: intro_anim;
+    animation-duration: 3s;
+}
+
+#introduction h1 {
+    font-size: 80px;
+}
+
+#introduction p {
+    font-style: italic; 
+    font-size: 20px;
+    margin-top: -20px;
+}
+
+@keyframes intro_anim {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity 1:
+    }
+}
+
+
+/*FOOTER*/
+
+footer {
+    display: flex;
+    flex-direction:  column;
+    background-color: #204051;
+    color: #e7dfd5;;
+    align-items: center;
+    padding: 100px 50px;
+    bottom: 0;
+}
+
+footer ul {
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+}
+
+footer ul li {
+    padding: 10px;
+}
+
+
+/*---------------------BUTTONS---------------------*/
+
+
+.button_with_background {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#show_details {
+    background-image: url("../images/mainbg.jpg");
+}
+
+#show_expertise {
+    background-image: url("../images/mainbg2.jpg");
+}
+
+#show_hobbies {
+    background-image: url("../images/mainbg3.jpg");
+}
+
+button {
+    padding: 5%;
+    cursor: pointer;
+    background: none;
+    border-style: none;
+    color: #e7dfd5;
+    font-size: 4vw;
+    font-family: 'Roboto Mono', sans-serif;
+    width: 100%;
+    outline: 0;
+    margin: auto;
+    transition: 0.5s ease-in-out;
+    font-weight: 900;
+}
+
+.active_button {
+    background-color: rgba(0,0,0,0.4);
+}
+
+.button_with_background button:hover {
+    color: #3b6978;
+}
+
+.hide_button {
+    font-size: 15px;
+    width: 100%;
+    padding: 25px;
+    margin-top: 50px;
+}
+
+/*---------------------CONTENT---------------------*/
+
+.displayed_info {
+    display: flex;
+    background: none;
+    position: relative;
+    flex-direction: column;
+    color: #e7dfd5;
+    margin: 0 auto;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Raleway', sans-serif;
+    overflow-y: hidden;
+    max-height: 0;
+    width: 60%;
+    transition: max-height 2s ease;
+}
+
+.shown_displayed_info {
+    transition: max-height 5s ease;
+    max-height: 1000vh;
+}
+
+hr {
+    width: 70%;
+    margin-top: 50px;
+}
+
+#personal_details #header{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+#personal_details #header #my_bg {
+    width: 100%;
+    margin: auto;
+    filter: grayscale(30%);
+}
+
+#personal_details #header #my_picture {
+    width: 20%;
+    border-radius: 50%; 
+    position: relative;
+    margin: -11% auto 0 auto;
+    border: 3px solid white;
+}
+
+#personal_details #header h2 {
+    font-size: 32px;
+}
+
+#personal_details #header p {
+    font-size: 20px;
+}
+
+#personal_details #details {
+    margin: 50px 70px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+.displayed_info section {
+    margin: 20px 10%;
+    text-align: center;
+}
+
+#expertise, #hobbies {
+    width: 100%;
+    justify-content: space-around;
+    text-align: center;
+}
+
+#expertise h3, #hobbies h3 {
+    font-size: 3em;
+}
+
+#expertise h4, #hobbies h4 {
+    font-size: 20px;
+    margin-top: -30px;
+}
+
+#expertise .gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    margin: auto;
+}
+
+#expertise .gallery video {
+    padding: 25px;
+}
+
+#expertise .gallery img {
+    width: 100%;
+    padding: 25px;
+}
+
+#expertise .gallery audio {
+    padding: 30px;
+}
+
+#expertise .gallery .caption {
+    padding: 20px;
+}
+
+.middle {
+    min-height: 300px;
+    transition: .5s ease-in-out;
+    opacity: 0;
+    background-color: black;
+    width: 100%;
+}
+
+.middle:hover {
+    opacity: 0.85;
+}
+
+.middle:hover .text {
+    visibility: visible;
+}
+
+.text {
+    color: #e7dfd5;
+    font-size: 1vw;
+    padding: 16px 32px;
+    visibility: hidden;
+    transition: .5s ease-in-out;
+}
+
+#hobbies section ul {
+    align-self: center;
+    padding: 0;
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+}
+
+#hobbies section ul li {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+}
+
+#hobbies section #list_of_games li:nth-child(1){
+    background-image: url("../images/hollowknight.jpg");
+}
+
+#hobbies section #list_of_games li:nth-child(2){
+    background-image: url("../images/dota2.jpg");
+}
+
+#hobbies section #list_of_games li:nth-child(3){
+    background-image: url("../images/ror2.jpg");
+}
+
+#hobbies section #list_of_games li:nth-child(4){
+    background-image: url("../images/drg.jpeg");
+}
+
+#hobbies section #list_of_ytchannels li:nth-child(1){
+    background-image: url("../images/pewdiepie.jpg");
+}
+
+#hobbies section #list_of_ytchannels li:nth-child(2){
+    background-image: url("../images/vsauce.jpg");
+}
+
+#hobbies section #list_of_ytchannels li:nth-child(3){
+    background-image: url("../images/vsauce3.jpeg");
+}
+
+#hobbies section #list_of_ytchannels li:nth-child(4){
+    background-image: url("../images/markrober.jpg");
+}
+
+#hobbies section #list_of_instruments li:nth-child(1){
+    background-image: url("../images/piano.jpg");
+}
+
+#hobbies section #list_of_instruments li:nth-child(2){
+    background-image: url("../images/guitar.jpg");
+}
+
+#hobbies section #list_of_instruments li:nth-child(3){
+    background-image: url("../images/violin.jpg");
+}
+
+#hobbies section #list_of_instruments li:nth-child(4){
+    background-image: url("../images/kazoo.jpg");
+}
+
+#hobbies section #list_of_instruments li:nth-child(5){
+    background-image: url("../images/kalimba.jpg");
+}
+
+#hobbies section #list_of_instruments li:nth-child(6){
+    background-image: url("../images/harmonica.jpg");
+}
+
+#hobbies section #list_of_instruments li:nth-child(7){
+    background-image: url("../images/recorder.jpg");
+}
+
+
+
+/* MEDIA QUERIES */
+
+@media (max-width:1000px) {
+
+    #navbar {
+        font-size: 10px;
+        opacity: 1;
+    }
+
+    #personal_details #header h2 {
+        font-size: 26px;
+    }
+    
+    #personal_details #details {
+        margin: 20px;
+        font-size: 13px;
+    }
+    
+    button {
+        font-size: 7vw;
+    }
+    
+    footer {
+        font-size: 10px;
+    }
+}
+
+@media (max-width:650px) {
+    #mobile_nav {
+        display: flex;
+        position: fixed;
+        height: 8vh;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        color: #e7dfd5;
+        background-color: rgba(0,0,0,0.4);
+        font-size: 5vw;
+        z-index: 5;
+    }
+    
+    #navbar {
+        display: none;
+        margin-top: 8vh;
+        height: 92vh;   
+        animation-name: none;
+        font-size: 5vw;
+        background-color: rgba(0,0,0,0.8);
+    }
+    
+    #navbar > div {
+        margin: 0;
+        flex-direction: column;
+        justify-content: center;
+        height: 92vh;
+        width: 100%;
+        text-align: center;
+    }
+    
+    #navbar ul li {
+        font-size: 4vw;
+    }
+    
+    #introduction {
+        width: 100vw;
+    }
+    
+    #introduction h1 {
+        font-size: 60px;
+    }
+
+    #introduction p {
+        font-size: 15px;
+    }
+    
+    .hide_button {
+        font-size: 10px;
+    }
+    
+    .displayed_info {
+        width: 100%;
+    }
+   
+    #personal_details #header #my_picture {
+        width: 30%;
+    }
+    
+    #personal_details #header h2 {
+        font-size: 18px;
+    }
+    
+    #expertise video {
+        width:80vw;
+    }
+    
+    #hobbies section ul li {
+        max-width: 150px;
+        max-height: 150px;
+        justify-self: center;
+    }
+    
+    #hobbies .middle {
+        min-height: 150px;
+    }
+    
+    #hobbies .text {
+        font-size: 5px;
+        text-align: center;
+    }
+    
+    footer {
+        text-align: center;
+        font-size: 8px;
+    }
+}
+
+@media (max-width:420px) {
+    #personal_details #details #email {
+        word-break: break-all;
+    }
+    
+    #introduction h1 {
+        font-size: 14vw;
+    }
+    
+    #introduction p {
+        margin-top: 10px;
+        font-size: 4vw;
+    }
+    
+    button {
+        font-size: 8vw;
+    }
+    
+    #expertise section {
+        max-width: 100vw;
+    }
+    
+    #expertise section p {
+        word-wrap: break-word;
+    }
+    
+}
+
+@media (max-width:310px) {
+    
+    #expertise h3, #hobbies h3 {
+        font-size: 2em;
+    }
+
+    #expertise h4, #hobbies h4 {
+        font-size: 10px;
+        margin-top: -20px;
+    }
+    
+    #expertise audio {
+        max-width: 80vw;
+    }
+    
+    #expertise section > p, #hobbies section > p{
+        font-size: 10px;
+    }
+    
+    #hobbies section ul {
+        grid-template-columns: 1fr;
+    }
+    
+    #introduction p {
+        font-size: 13px;
+    }
+    
+    footer {
+        max-width: 100vw;
+        font-size: 6px;
+    }
+    
+    footer ul {
+        display: grid;
+    }
+}
